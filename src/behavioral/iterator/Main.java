@@ -9,9 +9,9 @@ public class Main {
         employees.add(new Employee("Alice", 50000));
         employees.add(new Employee("Bob", 60000));
         employees.add(new Employee("Charlie", 70000));
+        EmployeeCollection employeeCollection = new EmployeeCollection(employees);
 
-        Company company = new Company(employees);
-        Iterator<Employee> iterator = company.createIterator();
+        Iterator<Employee> iterator = employeeCollection.createIterator();
 
         double totalSalary = 0;
         while (iterator.hasNext()) {

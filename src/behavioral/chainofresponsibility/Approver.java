@@ -1,4 +1,4 @@
-package behavioral.chainofresponsibility2;
+package behavioral.chainofresponsibility;
 
 public abstract class Approver {
     protected Approver next;

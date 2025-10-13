@@ -2,10 +2,10 @@ package behavioral.iterator;
 
 import java.util.List;
 
-public class Company implements Aggregate<Employee> {
+public class EmployeeCollection implements Collection<Employee> {
     private List<Employee> employees;
 
-    public Company(List<Employee> employees) {
+    public EmployeeCollection(List<Employee> employees) {
         this.employees = employees;
     }
 

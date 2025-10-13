@@ -1,4 +1,4 @@
-package behavioral.chainofresponsibility2;
+package behavioral.chainofresponsibility;
 
 public class TribeTechLead extends Approver {
     @Override
