@@ -12,4 +12,12 @@ public class Employee {
     public double getSalary() {
         return salary;
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", salary=" + salary +
+                '}';
+    }
 }

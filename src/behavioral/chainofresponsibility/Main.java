@@ -9,6 +9,6 @@ public class Main {
         developer.setNext(stl);
         stl.setNext(ttl);
 
-        developer.approve("hotfix");
+        developer.approve("master");
     }
 }

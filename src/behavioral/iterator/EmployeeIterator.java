@@ -17,10 +17,12 @@ public class EmployeeIterator implements Iterator<Employee> {
     }
 
     @Override
-    public Employee next() {
+    public Employee getCurrentAndGoNext() {
         if (!hasNext()) {
             throw new NoSuchElementException();
         }
-        return employees.get(currentIndex++);
+        Employee currEmployee = employees.get(currentIndex);
+        currentIndex++;
+        return currEmployee;
     }
 }

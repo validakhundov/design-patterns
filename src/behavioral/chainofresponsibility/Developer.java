@@ -5,11 +5,13 @@ public class Developer extends Approver {
     void approve(String mrBranch) {
         switch (mrBranch) {
             case "testing":
+                System.out.println("Developer added optional approval!");
                 next.approve(mrBranch);
                 break;
             case "master":
             case "hotfix":
-                System.out.println("TTL approval is needed!");
+                System.out.println("Developer added optional approval!");
+               next.approve(mrBranch);
                 break;
             default:
                 System.out.println("Developer approved MR!");

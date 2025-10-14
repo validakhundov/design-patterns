@@ -17,4 +17,12 @@ public class TransactionExecuter {
             System.out.println("- Reverse executed!");
         }
     }
+
+    public void reverseAll() {
+        while (!history.isEmpty()) {
+            Command cmd = history.pop();
+            cmd.reverse();
+            System.out.println("- Reverse executed!");
+        }
+    }
 }

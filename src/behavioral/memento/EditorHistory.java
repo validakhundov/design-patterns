@@ -4,13 +4,13 @@ import java.util.Stack;
 
 public
 class EditorHistory {
-    private final Stack<TextMemento> history = new Stack<>();
+    private final Stack<TextBackup> history = new Stack<>();
 
-    public void saveState(TextMemento m) {
+    public void saveState(TextBackup m) {
         history.push(m);
     }
 
-    public TextMemento undo() {
+    public TextBackup undo() {
         if (history.size() > 1) {
             history.pop();
             return history.peek();

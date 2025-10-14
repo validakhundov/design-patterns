@@ -10,7 +10,15 @@ public class EmployeeCollection implements Collection<Employee> {
     }
 
     @Override
-    public Iterator<Employee> createIterator() {
+    public Iterator<Employee> iterator() {
         return new EmployeeIterator(employees);
+    }
+
+
+    @Override
+    public String toString() {
+        return "EmployeeCollection{" +
+                "employees=" + employees +
+                '}';
     }
 }

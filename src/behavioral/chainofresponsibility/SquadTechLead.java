@@ -6,6 +6,7 @@ public class SquadTechLead extends Approver {
         switch (mrBranch) {
             case "master":
             case "hotfix":
+                System.out.println("STL added optional approval!");
                 next.approve(mrBranch);
                 break;
             case "testing":

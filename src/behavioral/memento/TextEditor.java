@@ -1,20 +1,24 @@
 package behavioral.memento;
 
+import java.time.LocalDateTime;
+
 public class TextEditor {
     private String text = "";
+    private LocalDateTime dateTime;
 
     public void type(String newText) {
         text += newText;
-        System.out.println("Current text: " + text);
+        dateTime = LocalDateTime.now();
+        System.out.println("Current text: " + text + " and date time: " + dateTime);
     }
 
-    public TextMemento save() {
-        return new TextMemento(text);
+    public TextBackup save() {
+        return new TextBackup(text, dateTime);
     }
 
-    public void restore(TextMemento memento) {
-        text = memento.getSavedText();
-        System.out.println("Undo performed → current text: " + text);
+    public void restore(TextBackup backup) {
+        text = backup.getSavedText();
+        System.out.println("Undo performed → current text: " + text + " and it's date time: " + backup.getSavedTextDateTime());
     }
 }
 
