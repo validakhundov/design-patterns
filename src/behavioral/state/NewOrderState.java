@@ -1,6 +1,6 @@
 package behavioral.state;
 
-public class CreatedState implements CardOrderState {
+public class NewOrderState implements CardOrderState {
     public void process(CardOrder cardOrder) {
         cardOrder.setState(new ProcessingState());
         System.out.println("📦 Order moved to PROCESSING (KYC + printing).");

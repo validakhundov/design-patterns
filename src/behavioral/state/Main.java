@@ -6,8 +6,10 @@ public class Main {
         System.out.println("Current State: " + cardOrder.state());
 
         cardOrder.process();
-        cardOrder.deliver();
         cardOrder.activate();
+//        cardOrder.process();
+//        cardOrder.deliver();
+//        cardOrder.activate();
 
         System.out.println("Final State: " + cardOrder.state());
     }

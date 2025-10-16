@@ -6,8 +6,4 @@ public class CardPaymentProcessor extends PaymentProcessor {
         System.out.println("💳 Debiting card for " + amount + " AZN");
     }
 
-    @Override
-    protected void notifyUser(double amount) {
-        System.out.println("📲 SMS: Your card payment of " + amount + " AZN was successful.");
-    }
 }

@@ -1,7 +1,7 @@
 package behavioral.state;
 
 public class CardOrder {
-    private CardOrderState state = new CreatedState();
+    private CardOrderState state = new NewOrderState();
     private String cancelReason;
 
     void setState(CardOrderState s) {
